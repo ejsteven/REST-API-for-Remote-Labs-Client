@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" href="/static/sproutcore/foundation/en/current/images/sproutcore-logo.png?1292247155" />
+	  <link rel="apple-touch-startup-image" media="screen and (orientation:portrait)" href="/static/sproutcore/foundation/en/current/images/sproutcore-startup-portrait.png?1292247155" /> 
+	  <link rel="apple-touch-startup-image" media="screen and (orientation:landscape)" href="/static/sproutcore/foundation/en/current/images/sproutcore-startup-landscape.png?1292247155" />
+	  <link rel="shortcut icon" href="" type="image/x-icon" />
+    
+    <title>App</title>
+  <script type="text/javascript">
+/* >>>>>>>>>> BEGIN source/core.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2010 Sprout Systems, Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+
+/* >>>>>>>>>> BEGIN source/system/browser.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2010 Sprout Systems, Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+var SC = SC || { BUNDLE_INFO: {}, LAZY_INSTANTIATION: {} };
+
+SC.browser = (function() {
+  var userAgent = navigator.userAgent.toLowerCase(),
+      version = (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1] ;
+
+  var browser = {
+    version: version,
+    safari: (/webkit/).test( userAgent ) ? version : 0,
+    opera: (/opera/).test( userAgent ) ? version : 0,
+    msie: (/msie/).test( userAgent ) && !(/opera/).test( userAgent ) ? version : 0,
+    mozilla: (/mozilla/).test( userAgent ) && !(/(compatible|webkit)/).test( userAgent ) ? version : 0,
+    mobileSafari: (/apple.*mobile.*safari/).test(userAgent) ? version : 0,
+    chrome: (/chrome/).test( userAgent ) ? version : 0,
+    windows: !!(/(windows)/).test(userAgent),
+    mac: !!((/(macintosh)/).test(userAgent) || (/(mac os x)/).test(userAgent)),
+    language: (navigator.language || navigator.browserLanguage).split('-', 1)[0]
+  };
+  
+    browser.current = browser.msie ? 'msie' : browser.mozilla ? 'mozilla' : browser.safari ? 'safari' : browser.opera ? 'opera' : 'unknown' ;
+  return browser ;
+})();
+
+/* >>>>>>>>>> BEGIN source/system/loader.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2010 Sprout Systems, Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+// sc_require("system/browser");
+
+SC.bundleDidLoad = function(bundle) {
+  var info = this.BUNDLE_INFO[bundle] ;
+  if (!info) info = this.BUNDLE_INFO[bundle] = {} ;
+  info.loaded = true ;
+};
+
+SC.bundleIsLoaded = function(bundle) {
+  var info = this.BUNDLE_INFO[bundle] ;
+  return info ? !!info.loaded : false ;
+};
+
+SC.loadBundle = function() { throw "SC.loadBundle(): SproutCore is not loaded."; };
+
+SC.setupBodyClassNames = function() {
+  var el = document.body ;
+  if (!el) return ;
+  var browser, platform, shadows, borderRad, classNames, style;
+  browser = SC.browser.current ;
+  platform = SC.browser.windows ? 'windows' : SC.browser.mac ? 'mac' : 'other-platform' ;
+  style = document.documentElement.style;
+  shadows = (style.MozBoxShadow !== undefined) || 
+                (style.webkitBoxShadow !== undefined) ||
+                (style.oBoxShadow !== undefined) ||
+                (style.boxShadow !== undefined);
+  
+  borderRad = (style.MozBorderRadius !== undefined) || 
+              (style.webkitBorderRadius !== undefined) ||
+              (style.oBorderRadius !== undefined) ||
+              (style.borderRadius !== undefined);
+  
+  classNames = el.className ? el.className.split(' ') : [] ;
+  if(shadows) classNames.push('box-shadow');
+  if(borderRad) classNames.push('border-rad');
+  classNames.push(browser) ;
+  classNames.push(platform) ;
+  if (parseInt(SC.browser.msie,0)==7) classNames.push('ie7') ;
+  if (SC.browser.mobileSafari) classNames.push('mobile-safari') ;
+  if ('createTouch' in document) classNames.push('touch');
+  el.className = classNames.join(' ') ;
+} ;
+
+/* >>>>>>>>>> BEGIN bundle_loaded.js */
+; if ((typeof SC !== 'undefined') && SC && SC.bundleDidLoad) SC.bundleDidLoad('sproutcore/bootstrap');
+
+</script>
+<script type="text/javascript">SC.buildMode = "debug";</script>
+
+     <link href="/static/sproutcore/testing/en/current/stylesheet.css?1292247155" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/foundation/en/current/stylesheet.css?1292247155" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/desktop/en/current/stylesheet.css?1292247155" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/standard_theme/en/current/stylesheet.css?1292247155" rel="stylesheet" type="text/css" />
+  <link href="/static/app/en/current/stylesheet.css?1297040758" rel="stylesheet" type="text/css" />
+   
+    
+  </head>
+    
+  <body class="sc-theme focus">  
+<script type="text/javascript">
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2010 Sprout Systems, Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+// sc_resource('setup_body_class_names'); // publish into inline format
+
+if (SC.setupBodyClassNames) SC.setupBodyClassNames() ;
+
+</script>
+
+
+<div id="loading">
+<p class="loading">Loading...<p>
+
+
+</div>
+  <script type="text/javascript" src="/static/sproutcore/debug/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/sproutcore/testing/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/sproutcore/runtime/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/sproutcore/foundation/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/sproutcore/desktop/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/sproutcore/datastore/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/sproutcore/en/current/javascript.js?1300616306"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/mixins/table_delegate.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/system/table_column.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/views/table_row.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/views/table_header.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/views/table_head.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/views/table.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/source/views/table_cell.js?1281999866"></script>
+  <script type="text/javascript" src="/static/table/en/current/bundle_loaded.js?1300616306"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/lproj/strings.js?1284641780"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/excanvas.js?1284641996"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.js?1284641780"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.js?1284641976"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.crosshair.js?1284641986"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.fillbetween.js?1284641982"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.image.js?1284641978"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.navigate.js?1284641972"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.pie.js?1284641966"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.selection.js?1284641962"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.stack.js?1284641958"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.threshold.js?1284641950"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/core.js?1284641780"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/excanvas.min.js?1284799866"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.colorhelpers.js?1284641988"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/jquery.flot.symbol.js?1284641956"></script>
+  <script type="text/javascript" src="/static/flot/en/current/source/views/graph.js?1284641780"></script>
+  <script type="text/javascript" src="/static/flot/en/current/bundle_loaded.js?1300616306"></script>
+  <script type="text/javascript" src="/static/app/en/current/bundle_info.js?1300616306"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/core.js?1291544931"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/admin.js?1300608036"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/deleteuser.js?1300604004"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/designer.js?1300616292"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/edituser.js?1300597488"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/exp.js?1300589589"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/exp_list.js?1300590927"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/exp_select.js?1297385186"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/lib/sha1.js?1284306008"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/login.js?1300595297"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/logout.js?1300590816"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/prev_exp.js?1300590770"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/profile.js?1300591095"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/controllers/schema.js?1294823611"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/core_exp.js?1295849559"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/admin_explist.js?1294825094"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/admin_expList.js?1290493356"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/exp_api.js?1292542697"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/exp_api.js?1292467786"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/expdata.js?1286639238"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/expdata.js?1291252272"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/explist.js?1293374346"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/explist.js?1291252326"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/prevexptask.js?1286534052"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/prevexptask.js?1286728184"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/profile.js?1284306008"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/profile.js?1284306008"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/schema.js?1291403972"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/schema.js?1291284113"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/useredit.js?1290491756"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/useredit.js?1291072728"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/models/voltage.js?1286557454"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/fixtures/voltage.js?1284971880"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/deleteuserPage.js?1300598628"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/editinguser_page1.js?1294825719"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/editinguser_page2.js?1294825810"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/editinguser_page3.js?1294825834"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/strings.js?1294826161"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/admin.js?1300598109"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/cam.js?1295826902"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/designer.js?1294825094"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/dial.js?1300012295"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/dial_label.js?1297043519"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/dial_selection.js?1297125194"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/drag_switch.js?1294824407"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/drag_switch_holder.js?1294824906"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/exp.js?1294824921"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/graph.js?1297389280"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/meter.js?1300601631"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/progress.js?1300586132"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/properties_panel.js?1300011054"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/select_design.js?1300596176"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/slider.js?1300589614"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/switch.js?1300012103"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/widget.js?1294824754"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/views/widgets_panel.js?1295923683"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/account_page.js?1294825686"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/admin_tools_page.js?1294825648"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/designer_page.js?1297390220"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/exp_page.js?1294825897"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/expList_page.js?1294825897"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/login_page.js?1294826034"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/main_page.js?1300594917"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/prev_exp_page.js?1300590606"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/profile_page.js?1294825960"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/rigs_page.js?1294825939"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/resources/schema_page.js?1294826054"></script>
+  <script type="text/javascript" src="/static/app/en/current/source/main.js?1300598581"></script>
+<script type="text/javascript">String.preferredLanguage = "en";</script>
+	</body>
+</html>

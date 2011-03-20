@@ -1,0 +1,199 @@
+.container-tab .sc-container-view { 
+  border: 1px #ccc solid;
+  font-family: arial;
+  font-size: 12px;
+  font-style: bold;
+  color: white;
+}
+
+.y-axis-label {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.rounded-corners {
+/*    border:2px solid #ccc; */
+    -webkit-border-radius:10px;
+    -moz-border-radius:15px;
+    -o-border-radius:
+}
+
+.widget-border-highlight {
+    border:4px solid #232c40
+}
+
+.widget-border-none {
+    border:4px solid transparent;
+}
+
+.no-style {
+    border:1px solid transparent;
+}
+
+.switch {
+  background-color: red;
+}
+
+.switch-holder {
+  background-color: gray;
+}
+
+.drop-target {
+  background-color: white;
+}
+
+.non-selected-exp {
+  border: 3px #fff solid;
+  z-index: 1;
+}
+
+.selected-exp {
+  margin: 10px;
+  border: 3px #0D4F55 dotted;
+  z-index: 2;
+/*
+  -webkit-border-radius:10px;
+  -moz-border-radius:15px; */
+}
+
+.stretch {
+  width: 100%;
+  height: 100%;
+}
+
+div.exp-id {
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+
+ /* margin: 0; */
+  padding: 5px 10px 0 10px;
+  width: 170px;
+  height: 22px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+div.exp-name {
+  text-align: right;
+  font-weight: normal;
+  color: #fff;
+  font-size: 12px;
+
+  width: 160px;
+}
+
+div.exp-bottom-overlay {
+  background: transparent static_url('images/face_overlay_background.png');
+  height: 50px;
+  left: 5px;
+  position: relative;
+  top: 125px;
+  width: 170px;
+  z-index: 20;
+}
+
+div.exp-background {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 10;
+}
+
+.rest-logo-large {
+  background: static_url('images/rest-logo-large.png') no-repeat;
+}
+
+.rest-logo-small {
+  background: static_url('images/rest-logo-small.png') no-repeat;
+}
+
+.rest-desc {
+  background: static_url('images/rest-desc.png') no-repeat;
+}
+
+/* Custom Text Fields */
+.login-body .sc-text-field-view {
+  border: 1px solid #000;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #f8f8f8;
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.4);
+  -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.4);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.4);
+  outline: 0 !important;
+}
+
+.login-body .sc-text-field-view.focus {
+  border: 2px solid #00a8ff;
+  margin-top: -1px;
+  margin-left: -1px;
+  outline: 0 !important;
+}
+
+.mozilla .login-body .sc-text-field-view .border {
+  -moz-appearance: none;
+}
+
+.login-body .sc-text-field-view input {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 0 6px;
+}
+
+.sc-view .login-prompt {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #444 !important;
+}
+
+.login-page label {
+  color: #DDD !important;
+  font-size: 10px;
+}
+
+.error-message {
+  color: #F66 !important;
+  font-size: 10px;
+}
+
+/* Default Panel Styling Overrides */
+.login-page .login-body {
+  background: none !important;
+}
+.login-page .top-left-edge {
+  display: none;
+}
+.login-page .top-edge {
+  display: none;
+}
+.login-page .top-right-edge {
+  display: none;
+}
+.login-page .right-edge {
+  display: none;
+}
+.login-page .bottom-right-edge {
+  display: none;
+}
+.login-page .bottom-edge {
+  display: none;
+}
+.login-page .bottom-left-edge {
+  display: none;
+}
+.login-page .left-edge {
+  display: none;
+}
+
+.toolbar {
+  background: static_url('images/toolbar-grad.png') repeat-x;
+}

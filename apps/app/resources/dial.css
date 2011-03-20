@@ -1,0 +1,121 @@
+.smooth-turn {
+    /*-moz-transition: all 1s ease-in-out;
+	-moz-transition-property: all;
+	-moz-transition-duration: 2s; */
+    -moz-transition: all 0.5s linear;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective: 1000;
+}
+
+.smooth-turn.dial-rotate {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+/*
+.smooth-turn.dial-0 {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);    
+}
+
+
+
+.smooth-turn.dial-180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+
+
+.smooth-turn.dial-120 {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+}
+
+.smooth-turn.dial-240 {
+    -webkit-transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -o-transform: rotate(240deg);
+}
+
+
+
+.smooth-turn.dial-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.smooth-turn.dial-270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+
+
+.smooth-turn.dial-72 {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+}
+
+.smooth-turn.dial-144 {
+    -webkit-transform: rotate(144deg);
+    -moz-transform: rotate(144deg);
+    -o-transform: rotate(144deg);
+}
+
+.smooth-turn.dial-216 {
+    -webkit-transform: rotate(216deg);
+    -moz-transform: rotate(216deg);
+    -o-transform: rotate(216deg);
+}
+
+.smooth-turn.dial-288 {
+    -webkit-transform: rotate(288deg);
+    -moz-transform: rotate(288deg);
+    -o-transform: rotate(288deg);
+}
+
+
+.smooth-turn.dial-30 {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+.smooth-turn.dial-60 {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+}
+
+.smooth-turn.dial-150 {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -o-transform: rotate(150deg);
+}
+
+.smooth-turn.dial-210 {
+    -webkit-transform: rotate(210deg);
+    -moz-transform: rotate(210deg);
+    -o-transform: rotate(210deg);
+}
+
+.smooth-turn.dial-300 {
+    -webkit-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -o-transform: rotate(300deg);
+}
+
+.smooth-turn.dial-330 {
+    -webkit-transform: rotate(330deg);
+    -moz-transform: rotate(330deg);
+    -o-transform: rotate(330deg);
+}
+
+*/

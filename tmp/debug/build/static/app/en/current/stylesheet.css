@@ -1,0 +1,554 @@
+/* >>>>>>>>>> BEGIN source/resources/dial.css */
+.smooth-turn {
+    /*-moz-transition: all 1s ease-in-out;
+	-moz-transition-property: all;
+	-moz-transition-duration: 2s; */
+    -moz-transition: all 0.5s linear;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective: 1000;
+}
+
+.smooth-turn.dial-rotate {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+/*
+.smooth-turn.dial-0 {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);    
+}
+
+
+
+.smooth-turn.dial-180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+
+
+.smooth-turn.dial-120 {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+}
+
+.smooth-turn.dial-240 {
+    -webkit-transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -o-transform: rotate(240deg);
+}
+
+
+
+.smooth-turn.dial-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.smooth-turn.dial-270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+
+
+.smooth-turn.dial-72 {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+}
+
+.smooth-turn.dial-144 {
+    -webkit-transform: rotate(144deg);
+    -moz-transform: rotate(144deg);
+    -o-transform: rotate(144deg);
+}
+
+.smooth-turn.dial-216 {
+    -webkit-transform: rotate(216deg);
+    -moz-transform: rotate(216deg);
+    -o-transform: rotate(216deg);
+}
+
+.smooth-turn.dial-288 {
+    -webkit-transform: rotate(288deg);
+    -moz-transform: rotate(288deg);
+    -o-transform: rotate(288deg);
+}
+
+
+.smooth-turn.dial-30 {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+.smooth-turn.dial-60 {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+}
+
+.smooth-turn.dial-150 {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -o-transform: rotate(150deg);
+}
+
+.smooth-turn.dial-210 {
+    -webkit-transform: rotate(210deg);
+    -moz-transform: rotate(210deg);
+    -o-transform: rotate(210deg);
+}
+
+.smooth-turn.dial-300 {
+    -webkit-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -o-transform: rotate(300deg);
+}
+
+.smooth-turn.dial-330 {
+    -webkit-transform: rotate(330deg);
+    -moz-transform: rotate(330deg);
+    -o-transform: rotate(330deg);
+}
+
+*/
+/* >>>>>>>>>> BEGIN source/resources/meter.css */
+.ease-transit {
+    /*-moz-transition: all 1s ease-in-out;
+	-moz-transition-property: all;
+	-moz-transition-duration: 2s; */
+    -moz-transition: all 0.5s linear;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective: 1000;
+}
+
+.ease-transit.hand-0 {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+.ease-transit.hand-5 {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+}
+
+.ease-transit.hand-10 {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+
+.ease-transit.hand-15 {
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+}
+
+.ease-transit.hand-20 {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+}
+
+.ease-transit.hand-25 {
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+}
+
+.ease-transit.hand-30 {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+
+.ease-transit.hand-35 {
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+}
+
+.ease-transit.hand-40 {
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+}
+
+.ease-transit.hand-45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.ease-transit.hand-50 {
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+}
+
+.ease-transit.hand-55 {
+  -webkit-transform: rotate(55deg);
+  -moz-transform: rotate(55deg);
+  -o-transform: rotate(55deg);
+}
+
+.ease-transit.hand-60 {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+}
+
+.ease-transit.hand-65 {
+  -webkit-transform: rotate(65deg);
+  -moz-transform: rotate(65deg);
+  -o-transform: rotate(65deg);
+}
+
+.ease-transit.hand-70 {
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -o-transform: rotate(70deg);
+}
+
+.ease-transit.hand-75 {
+  -webkit-transform: rotate(75deg);
+  -moz-transform: rotate(75deg);
+  -o-transform: rotate(75deg);
+}
+
+.ease-transit.hand-80 {
+  -webkit-transform: rotate(80deg);
+  -moz-transform: rotate(80deg);
+  -o-transform: rotate(80deg);
+}
+
+.ease-transit.hand-85 {
+  -webkit-transform: rotate(85deg);
+  -moz-transform: rotate(85deg);
+  -o-transform: rotate(85deg);
+}
+
+.ease-transit.hand-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.ease-transit.hand-95 {
+  -webkit-transform: rotate(95deg);
+  -moz-transform: rotate(95deg);
+  -o-transform: rotate(95deg);
+}
+
+.ease-transit.hand-100 {
+  -webkit-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
+  -o-transform: rotate(100deg);
+}
+
+.ease-transit.hand-105 {
+  -webkit-transform: rotate(105deg);
+  -moz-transform: rotate(105deg);
+  -o-transform: rotate(105deg);
+}
+
+.ease-transit.hand-110 {
+  -webkit-transform: rotate(110deg);
+  -moz-transform: rotate(110deg);
+  -o-transform: rotate(110deg);
+}
+
+.ease-transit.hand-115 {
+  -webkit-transform: rotate(115deg);
+  -moz-transform: rotate(115deg);
+  -o-transform: rotate(115deg);
+}
+
+.ease-transit.hand-120 {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+}
+
+.ease-transit.hand-125 {
+  -webkit-transform: rotate(125deg);
+  -moz-transform: rotate(125deg);
+  -o-transform: rotate(125deg);
+}
+
+.ease-transit.hand-130 {
+  -webkit-transform: rotate(130deg);
+  -moz-transform: rotate(130deg);
+  -o-transform: rotate(130deg);
+}
+
+.ease-transit.hand-135 {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+}
+
+.ease-transit.hand-140 {
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+}
+
+.ease-transit.hand-145 {
+  -webkit-transform: rotate(145deg);
+  -moz-transform: rotate(145deg);
+  -o-transform: rotate(145deg);
+}
+
+.ease-transit.hand-150 {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  -o-transform: rotate(150deg);
+
+}
+
+.ease-transit.hand-155 {
+  -webkit-transform: rotate(155deg);
+  -moz-transform: rotate(155deg);
+  -o-transform: rotate(155deg);
+}
+
+.ease-transit.hand-160 {
+  -webkit-transform: rotate(160deg);
+  -moz-transform: rotate(160deg);
+  -o-transform: rotate(160deg);
+}
+
+.ease-transit.hand-165 {
+  -webkit-transform: rotate(165deg);
+  -moz-transform: rotate(165deg);
+  -o-transform: rotate(165deg);
+}
+
+.ease-transit.hand-170 {
+  -webkit-transform: rotate(170deg);
+  -moz-transform: rotate(170deg);
+  -o-transform: rotate(170deg);
+}
+
+.ease-transit.hand-175 {
+  -webkit-transform: rotate(175deg);
+  -moz-transform: rotate(175deg);
+  -o-transform: rotate(175deg);
+}
+
+.ease-transit.hand-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+/* >>>>>>>>>> BEGIN source/resources/style.css */
+.container-tab .sc-container-view { 
+  border: 1px #ccc solid;
+  font-family: arial;
+  font-size: 12px;
+  font-style: bold;
+  color: white;
+}
+
+.y-axis-label {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.rounded-corners {
+/*    border:2px solid #ccc; */
+    -webkit-border-radius:10px;
+    -moz-border-radius:15px;
+    -o-border-radius:
+}
+
+.widget-border-highlight {
+    border:4px solid #232c40
+}
+
+.widget-border-none {
+    border:4px solid transparent;
+}
+
+.no-style {
+    border:1px solid transparent;
+}
+
+.switch {
+  background-color: red;
+}
+
+.switch-holder {
+  background-color: gray;
+}
+
+.drop-target {
+  background-color: white;
+}
+
+.non-selected-exp {
+  border: 3px #fff solid;
+  z-index: 1;
+}
+
+.selected-exp {
+  margin: 10px;
+  border: 3px #0D4F55 dotted;
+  z-index: 2;
+/*
+  -webkit-border-radius:10px;
+  -moz-border-radius:15px; */
+}
+
+.stretch {
+  width: 100%;
+  height: 100%;
+}
+
+div.exp-id {
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+
+ /* margin: 0; */
+  padding: 5px 10px 0 10px;
+  width: 170px;
+  height: 22px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+div.exp-name {
+  text-align: right;
+  font-weight: normal;
+  color: #fff;
+  font-size: 12px;
+
+  width: 160px;
+}
+
+div.exp-bottom-overlay {
+  background: transparent url('/static/app/en/current/resources/images/face_overlay_background.png?1293259685');
+  height: 50px;
+  left: 5px;
+  position: relative;
+  top: 125px;
+  width: 170px;
+  z-index: 20;
+}
+
+div.exp-background {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 10;
+}
+
+.rest-logo-large {
+  background: url('/static/app/en/current/resources/images/rest-logo-large.png?1293714538') no-repeat;
+}
+
+.rest-logo-small {
+  background: url('/static/app/en/current/resources/images/rest-logo-small.png?1293799448') no-repeat;
+}
+
+.rest-desc {
+  background: url('/static/app/en/current/resources/images/rest-desc.png?1293718318') no-repeat;
+}
+
+/* Custom Text Fields */
+.login-body .sc-text-field-view {
+  border: 1px solid #000;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #f8f8f8;
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.4);
+  -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.4);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.4);
+  outline: 0 !important;
+}
+
+.login-body .sc-text-field-view.focus {
+  border: 2px solid #00a8ff;
+  margin-top: -1px;
+  margin-left: -1px;
+  outline: 0 !important;
+}
+
+.mozilla .login-body .sc-text-field-view .border {
+  -moz-appearance: none;
+}
+
+.login-body .sc-text-field-view input {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 0 6px;
+}
+
+.sc-view .login-prompt {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #444 !important;
+}
+
+.login-page label {
+  color: #DDD !important;
+  font-size: 10px;
+}
+
+.error-message {
+  color: #F66 !important;
+  font-size: 10px;
+}
+
+/* Default Panel Styling Overrides */
+.login-page .login-body {
+  background: none !important;
+}
+.login-page .top-left-edge {
+  display: none;
+}
+.login-page .top-edge {
+  display: none;
+}
+.login-page .top-right-edge {
+  display: none;
+}
+.login-page .right-edge {
+  display: none;
+}
+.login-page .bottom-right-edge {
+  display: none;
+}
+.login-page .bottom-edge {
+  display: none;
+}
+.login-page .bottom-left-edge {
+  display: none;
+}
+.login-page .left-edge {
+  display: none;
+}
+
+.toolbar {
+  background: url('/static/app/en/current/resources/images/toolbar-grad.png?1295794465') repeat-x;
+}
